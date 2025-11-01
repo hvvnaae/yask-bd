@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday YASK</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Happy 19th Birthday, YASK 🎉</h1>
+    <p>From someone who loves you a lot 🤍</p>
+  </header>
+
+  <nav>
+    <a href="#page1">Home</a>
+    <a href="#page2">Why I Love You</a>
+    <a href="#page3">Our Memories</a>
+    <a href="#page4">A Letter For You</a>
+  </nav>
+
+  <section id="page1" class="page">
+  <h2>Happy Birthday, love 💙</h2>
+
+  <p>
+    Today, the world is a little brighter because you're here.  
+    I made this little space just for you to celebrate your smile,  
+    your warmth, and the way you make everything feel lighter.  
+    Scroll through these pages and you'll see just how much you mean to me.
+  </p>
+
+  <!-- Floating heart -->
+  <div class="heart-floating">💙</div>
+</section>
+
+
+  <section id="page2" class="page">
+    <h2>Why I Love You 💫</h2>
+    <ul>
+     <p>I love you in a way that feels quiet and deep, like something that has always lived inside me, waiting for you to arrive. 
+        I love you because your presence feels like warmth after a long winter; gentle, steady, familiar in a way I can’t explain.
+        I love the way your voice softens when you talk to me, the way my heart slows down when I’m close to you, the way you look at me like you’re memorizing a feeling.
+        I love you because with you, love is not loud or heavy; it’s calm, safe, and full. You make life softer. 
+        You make moments brighter without even trying. Loving you feels like resting my soul somewhere it finally belongs. 
+        And if I had to choose you again, in every version of myself, in every world I would.</p>
+    </ul>
+  </section>
+<div class="heart-floating" style="left: 20%; animation-delay: 0s;">💙</div>
+<div class="heart-floating" style="left: 40%; font-size:1.5rem; animation-delay: 1.5s;">💙</div>
+<div class="heart-floating" style="left: 60%; font-size:2.5rem; animation-delay: 3s;">💙</div>
+<div class="heart-floating" style="left: 80%; font-size:1.8rem; animation-delay: 2s;">💙</div>
+
+  <section id="page3" class="page">
+   <h2>Our Memories 📸</h2>
+
+<div class="slideshow-container">
+  <div class="slide active">
+    <img src="images/trip.jpeg" alt="Memory 1">
+    <p class="caption">Our first trip : when it all started.</p>
+  </div>
+  <div class="slide">
+    <img src="images/bigtac.jpeg" alt="Memory 2">
+    <p class="caption">Just a few raindrops, but holding your hand makes it perfect. </p>
+  </div>
+  <div class="slide">
+    <img src="images/cocreate.jpeg" alt="Memory 3">
+    <p class="caption">I never knew I would be a fan of study dates.</p>
+  </div>
+  <div class="slide">
+    <img src="images/kiss.jpeg" alt="Memory 4">
+    <p class="caption">That first kiss… a spark that will never fade.</p>
+  </div>
+<div class="slide">
+    <img src="images/amphi.jpeg" alt="Memory 5">
+    <p class="caption">An 'us' moment.</p>
+  </div>
+  <button class="prev" onclick="prevSlide()">❮</button>
+  <button class="next" onclick="nextSlide()">❯</button>
+</div>
+
+  </section>
+
+
+ <section id="page4" class="page">
+  <h2>My Letter to You 💌</h2>
+  
+  <button id="revealBtn">Open My Letter</button>
+  
+  <div id="loveLetter" style="display:none;">
+    <p>
+      My love,<br><br>
+      Every moment with you feels like a little piece of magic.  
+      You make even the smallest things unforgettable.  
+      I hope this letter reminds you how much you mean to me 💙<br><br>
+      Happy 19th Birthday my world!  
+      With all my heart,  
+      Hanae.
+    </p>
+  </div>
+</section>
+
+  </section>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+  slides.forEach((s, i) => {
+    s.classList.remove('active');
+    if(i === index) s.classList.add('active');
+  });
+}
+
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
+
+function prevSlide() {
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  showSlide(slideIndex);
+}
+
+// Initialize first slide
+showSlide(slideIndex);
+</script>
+
+<script>
+const revealBtn = document.getElementById('revealBtn');
+const loveLetter = document.getElementById('loveLetter');
+
+revealBtn.addEventListener('click', () => {
+  if(loveLetter.style.display === 'none') {
+    loveLetter.style.display = 'block';
+    revealBtn.style.display = 'none'; // optional: hide the button after click
+  }
+});
+</script>
+
+</body>
+</html>

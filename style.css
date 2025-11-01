@@ -1,0 +1,204 @@
+/* Navy blue romantic theme */
+:root {
+  --navy: #0a2342;
+  --light: #ffffff;
+  --accent: #c8d9f0;
+  --soft: #f4f7fb;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Sacramento&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: var(--soft);
+  color: var(--navy);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 50px 20px;
+  background: var(--navy);
+  color: var(--light);
+  font-family: 'Sacramento', cursive;
+  font-size: 2rem;
+}
+
+nav {
+  background: var(--accent);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #375a8c;
+}
+
+.page {
+  padding: 80px 20px;
+  min-height: 90vh;
+  border-bottom: 2px solid var(--accent);
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2.2rem;
+}
+
+/* Home page paragraph style */
+#page1 p {
+  max-width: 650px;
+  margin: 25px auto;
+  font-size: 1.15rem;
+  line-height: 1.9rem;
+  color: var(--navy);
+  background: var(--light);
+  padding: 20px 25px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.09);
+  border: 1px solid var(--accent);
+}
+
+/* Paragraph style for Why I Love You section */
+#page2 p {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: var(--navy);
+  background: var(--accent);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating hearts effect - soft randomized */
+.heart-floating {
+  position: fixed;
+  top: -10vh;
+  font-size: 2rem;
+  opacity: 0.7;
+  animation: floatHearts 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  25% { transform: translateX(-20px) translateY(25vh) rotate(15deg); }
+  50% { transform: translateX(10px) translateY(50vh) rotate(-10deg); }
+  75% { transform: translateX(-15px) translateY(75vh) rotate(5deg); }
+  100% { transform: translateX(20px) translateY(100vh) rotate(0deg); }
+}
+.slideshow-container {
+  position: relative;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+  animation: fadeSlide 0.8s;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--navy);
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: var(--navy);
+  color: var(--light);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@keyframes fadeSlide {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#revealBtn {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--navy);
+  color: var(--light);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+#revealBtn:hover {
+  background: #375a8c;
+}
+
+#loveLetter p {
+  max-width: 600px;
+  margin: 30px auto 0;
+  font-size: 1.15rem;
+  line-height: 1.9rem;
+  color: var(--navy);
+  background: var(--accent);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  animation: fadeIn 1s;
+}
+
